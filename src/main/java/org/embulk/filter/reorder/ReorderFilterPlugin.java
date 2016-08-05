@@ -79,7 +79,7 @@ public class ReorderFilterPlugin
                     for (Column column : outputSchema.getColumns()) {
                         Column input = inputSchema.lookupColumn(column.getName());
 
-                        if (reader.isNull(column)) {
+                        if (reader.isNull(input)) {
                             builder.setNull(column);
                             continue;
                         }
